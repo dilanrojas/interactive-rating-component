@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="./main.js" defer></script>
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+  <main>
+    <article class="rating-card wrapper">
+      <div class="rating-wrapper">
+        <picture class="star-icon-wrapper">
+          <img src="assets/icon-star.svg" alt="Star icon">
+        </picture>
+        <div class="rating-card-text flow">
+          <h1>How did we do?</h1>
+          <p>
+            Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!
+          </p>
+        </div>
+        <form action="" class="rating-form">
+          <div class="rates-wrapper">
+            <button type="button" class="rate" data-rate="1"><span>1</span></button>
+            <button type="button" class="rate" data-rate="2"><span>2</span></button>
+            <button type="button" class="rate" data-rate="3"><span>3</span></button>
+            <button type="button" class="rate" data-rate="4"><span>4</span></button>
+            <button type="button" class="rate" data-rate="5"><span>5</span></button>
+          </div>
+          <button class="submit-btn"><span>submit</span></button>
+        </form>
+      </div>
+      <div class="thanks-wrapper hidden">
+        <picture class="thank-you-picture">
+          <img src="assets/illustration-thank-you.svg" alt="Phone printing paper from the screen">
+        </picture>
+        <div class="rating-selected-wrapper">
+          <p>
+            You selected
+            <span class="rating-selected"></span>
+            out of 5
+          </p>
+        </div>
+        <div class="thank-you-card-text">
+          <h1>Thank you!</h1>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

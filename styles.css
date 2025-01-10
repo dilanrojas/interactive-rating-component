@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --ff-html: "Overpass", serif;
+
+  --orange: hsl(25, 97%, 53%);
+  
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0
+}
+
+*, *::after, *::before { box-sizing: border-box }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  color: var(--white)
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit
+}
+
+html {
+  font-family: var(--ff-html);
+  color: var(--light-grey);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  background-color: var(--very-dark-blue);
+}
+
+@keyframes fade-out {
+  100% { opacity: 0 }
+}
+
+@keyframes fade-in {
+  100% { opacity: 1 }
+}
+
+.rating-card {
+  background: linear-gradient(to bottom, #202933, #161D25);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.star-icon-wrapper {
+  --size: 48px;
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+  background-color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem
+}
+
+.rating-card-text {
+  margin-bottom: 1.5rem
+}
+
+.rating-card-text h1 {
+  font-size: 1.85rem;
+}
+
+.rating-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem
+}
+
+.rates-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rates-wrapper button {
+  --size: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+  background-color: var(--dark-blue);
+  transition: background-color .1s ease, color .1s ease;
+  font-weight: 600;
+
+  & span { margin-top: .2rem };
+}
+
+.rates-wrapper button:hover {
+  background-color: var(--orange);
+  color: var(--very-dark-blue)
+}
+
+.rates-wrapper button.selected {
+  background-color: var(--white);
+  color: var(--very-dark-blue)
+}
+
+.submit-btn {
+  background-color: var(--orange);
+  color: var(--very-dark-blue);
+  text-transform: uppercase;
+  padding: .5rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding-top: .7rem;
+  border-radius: 40px;
+  transition: background-color .1s ease;
+
+  &:hover { background-color: var(--white) }
+}
+
+.thanks-wrapper { opacity: 0 }
+
+.thanks-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.thank-you-picture {
+  display: block;
+  margin-bottom: 1rem
+}
+
+.rating-selected-wrapper {
+  background-color: var(--dark-blue);
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 1.8rem;
+  padding: .4rem 1.3rem;
+  padding-top: .62rem;
+  border-radius: 30px;
+  color: var(--orange);
+  opacity: .8;
+}
+
+.thank-you-card-text h1 {
+  margin-bottom: 1rem
+}
+
+/* Utility classes */
+.wrapper {
+  --width: 400px;
+  --padding: 2rem;
+
+  width: min(var(--width), 100% - var(--padding));
+  height: 400px;
+  margin-inline: auto
+}
+
+.flow > * + * {
+  margin-top: .8rem
+}
+
+.fading-out {
+  animation: fade-out .5s forwards
+}
+
+.fading-in {
+  animation: fade-in .5s forwards
+}
+
+.hidden {
+  display: none;
+}
