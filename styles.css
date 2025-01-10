@@ -125,10 +125,10 @@ body {
   background-color: var(--orange);
   color: var(--very-dark-blue);
   text-transform: uppercase;
-  padding: .5rem;
+  padding: .8rem;
   font-weight: 600;
   letter-spacing: 1.5px;
-  padding-top: .7rem;
+  padding-top: .95rem;
   border-radius: 40px;
   transition: background-color .1s ease;
 
